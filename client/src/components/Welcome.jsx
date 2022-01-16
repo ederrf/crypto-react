@@ -46,11 +46,10 @@ const Welcome = () => {
       <div className="flex mf:flex-row flex-col items-start justify-between md:p-20 py-12 px-4">
         <div className="flex flex-1 justify-start items-start flex-col mf:mr-10">
           <h1 className="text-3xl sm:text-5xl text-white text-gradient py-1">
-            Send Crypto <br /> across the world
+            Send Crypto <br /> across the world!
           </h1>
           <p className="text-left mt-5 text-white font-light md:w-9/12 w-11/12 text-base">
-            Explore the crypto world. Buy and sell cryptocurrencies easily on
-            Krypto.
+            Explore the crypto world! <br/><br/>Transfer crypto on the <b><a className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600" href="https://ropsten.etherscan.io/" target="_blank">Ropsten Network</a></b> by using the form below and using <a className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600" href="https://metamask.io/" target="_blank">MetaMask!</a>
           </p>
           {!currentAccount && (
             <button
@@ -65,7 +64,11 @@ const Welcome = () => {
             </button>
           )}
 
-          <div className="grid sm:grid-cols-3 grid-cols-2 w-full mt-10">
+          {currentAccount && (<p className="text-left mt-5 text-white font-light md:w-9/12 w-11/12 text-base font-bold">
+            Wallet connected!
+          </p>)}
+
+          {/* <div className="grid sm:grid-cols-3 grid-cols-2 w-full mt-10">
             <div className={`rounded-tl-2xl ${companyCommonStyles}`}>
               Reliability
             </div>
@@ -80,7 +83,7 @@ const Welcome = () => {
             <div className={`rounded-br-2xl ${companyCommonStyles}`}>
               Blockchain
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div className="flex flex-col flex-1 items-center justify-start w-full mf:mt-0 mt-10">
